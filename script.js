@@ -1,18 +1,94 @@
-const toggleButton = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme');
-
-// Check for saved theme preference
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-toggleButton.addEventListener('click', () => {
-    let theme = document.documentElement.getAttribute('data-theme');
-    if (theme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    }
-});
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #ba68c8;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background: rgba(186, 104, 200, 0.7);
+    padding: 50px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 55px;
+}
+
+/* Sections */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #ba68c8;
+    color: white;
+}
+
+.section.light {
+    background: #f8bbd0;
+    color: #333;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Skills */
+.skills-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    color: #ba68c8;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #ba68c8;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
