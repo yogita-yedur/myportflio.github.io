@@ -1,50 +1,94 @@
-:root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --accent-color: #007bff;
-    --card-bg: #f4f4f4;
-}
-
-[data-theme="dark"] {
-    --bg-color: #1a1a1a;
-    --text-color: #f4f4f4;
-    --accent-color: #3793ff;
-    --card-bg: #2d2d2d;
-}
-
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    transition: 0.3s;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 5%;
-    background: var(--accent-color);
+    padding: 15px 30px;
+    background: #ba68c8;
     color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
-nav ul { display: flex; list-style: none; gap: 15px; }
-nav a { color: white; text-decoration: none; font-weight: bold; }
+nav ul {
+    display: flex;
+    list-style: none;
+}
 
-.section { padding: 60px 10%; border-bottom: 1px solid #ddd; }
-.profile-img { width: 200px; border-radius: 50%; margin-top: 20px; border: 4px solid var(--accent-color); }
+nav ul li {
+    margin-left: 20px;
+}
 
-.card, .project-item {
-    background: var(--card-bg);
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background: rgba(186, 104, 200, 0.7);
+    padding: 50px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 55px;
+}
+
+/* Sections */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #ba68c8;
+    color: white;
+}
+
+.section.light {
+    background: #f8bbd0;
+    color: #333;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Skills */
+.skills-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    color: #ba68c8;
     padding: 20px;
-    margin: 10px 0;
-    border-radius: 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.gallery-container img { width: 30%; margin: 1%; border-radius: 5px; }
+.card:hover {
+    transform: scale(1.1);
+}
 
-#theme-toggle { cursor: pointer; padding: 5px 10px; border: none; border-radius: 5px; }
+/* Footer */
+footer {
+    background: #ba68c8;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
